@@ -14,9 +14,9 @@ element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.agend
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 agendaTime = soup.find_all('span',{'class':'agendaTime'})
-print(len(agendaTime))
+#print(len(agendaTime))
 agendaTitle = soup.find_all('p',{'style':'font-family: TTCommons-Medium; font-size: 18px; color:#32353A; line-height: 21px;'})
-print(len(agendaTitle))
+#print(len(agendaTitle))
 
 for i in range(len(agendaTitle)):
     print(agendaTime[i].text,' | ',agendaTitle[i].text)
